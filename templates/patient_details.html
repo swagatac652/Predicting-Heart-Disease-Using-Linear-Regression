@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Patient Details</title>
+<style>
+*{border-radius:10px;}
+.background
+{
+background-image:linear-gradient(lightblue, white)
+}
+.heading
+{
+text-decoration:underline;
+text-shadow: 2px 2px violet;
+}
+.legend{
+font-weight:bold;
+font-style:italic;
+color:red;
+font-size:25px;
+}
+.starred{
+border:2px solid red;
+padding:5px;
+text-align:center;
+margin:10px 600px 10px 600px;
+}
+.button:hover
+{
+background:lightgreen;
+width:100px;
+height:50px;
+transition: width 5s, height 5s;
+}
+</style>
+</head>
+<body class="background">
+	<br>
+	<center><h1 class="heading">Heart Disease Risk Level Predictor</h1>
+	<br><p class="starred">Please fill this form with your correct and true details</p></center>
+	<br>
+	<form action="http://127.0.0.1:5000/getresults" method="POST">
+		<fieldset>
+		<legend class="legend">Personal Details</legend>
+		<label><b>Name: </label></b> <input type="text" required="required" name="name"/> <font color="red">*</font><br><br>
+		<label><b>Gender (1-male,2-Female): </label></b><input type="text" required="required" name="gender"/><font color="red">*</font><br><br>
+		<label><b>Age: </label></b><input type="text" required="required" name="age"/><font color="red">*</font><br><br>
+		<label><b>TC(mg/dL): </label></b> <input type="text" required="required" name="tc"/><font color="red">*</font><br><br>
+		<label><b>HDL(mg/dL): </label></b><input type="text" required="required" name="hdl"/><font color="red">*</font><br><br>
+		<label><b>SBP(mm Hg): </label></b> <input type="text" required="required" name="sbp"/><font color="red">*</font><br><br>
+		<label><b>Smoke(1-yes,0-no): </label></b> <input type="text" required="required" name="smoke"/><font color="red">*</font><br><br>
+		<label><b>Blood Pressure Medication(1/2): </label></b><input type="text" required="required" name="bpm"/><font color="red">*</font><br><br>
+		<label><b>Diabetics(1-yes,0-no): </label></b> <input type="text" required="required" name="diab"/><font color="red">*</font><br><br>
+		</fieldset>
+		<br><br><br>
+		<input class="button" type="submit" value="Submit Details"/>
+
+	</form>
+<br><br>
+</body>
+<footer>
+<center>&copy;<i>Swag</i></center>
+</footer>
+</html>
